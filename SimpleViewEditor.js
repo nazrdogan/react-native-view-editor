@@ -19,7 +19,6 @@ const styles = StyleSheet.create({
 
 export class ViewEditor extends Component {
   static propTypes = {
-    style: View.propTypes.style,
     imageHeight: PropTypes.number.isRequired,
     imageWidth: PropTypes.number.isRequired,
     imageContainerHeight: PropTypes.number,
