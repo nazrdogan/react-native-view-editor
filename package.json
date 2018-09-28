@@ -1,10 +1,10 @@
 {
-  "name": "react-native-view-editor-2",
-  "version": "1.0.0",
+  "name": "react-native-view-editor-3",
+  "version": "1.0.1",
   "description": "A simple wrapper for being able to rotate, pan, and resize a child view or image with animations",
   "repository": {
     "type": "git",
-    "url": "https://github.com/doubleqliq/react-native-view-editor.git"
+    "url": "https://github.com/nazrdogan/react-native-view-editor.git"
   },
   "main": "index.js",
   "scripts": {

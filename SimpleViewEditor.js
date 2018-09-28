@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import {
   Dimensions,
   PanResponder,
@@ -7,6 +7,7 @@ import {
   Easing,
   StyleSheet,
 } from 'react-native';
+import { PropTypes } from 'prop-types';
 import { distance, angle, center } from './utilities';
 const { width, height } = Dimensions.get('window');
 
