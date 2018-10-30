@@ -6,6 +6,7 @@ import {
   Animated,
   Easing,
   StyleSheet,
+  TouchableWithoutFeedback
 } from 'react-native';
 import PropTypes from 'prop-types';
 import { distance, angle, center } from './utilities';
@@ -237,21 +238,23 @@ export class ViewEditor extends Component {
       animatedStyle.transform.push({ rotate: this.state.angle });
     }
     return (
-      <View
-        style={[
-          style,
-          styles.container,
-          { width: imageContainerWidth, height: imageContainerHeight }
-        ]}
-        {...this._panResponder.panHandlers}
-      >
-        <Animated.View
-          style={animatedStyle}
-        >
-          {children(size.x, size.y)}
-        </Animated.View>
-        {imageMask}
-      </View>
+      <Animated.View  {...this._panResponder.panHandlers}>
+        <TouchableWithoutFeedback>
+          <View
+            style={[
+              style,
+              styles.container,
+              { width: imageContainerWidth, height: imageContainerHeight }
+            ]}
+
+          >
+            <Animated.View style={animatedStyle}>
+              {children(size.x, size.y)}
+            </Animated.View>
+            {imageMask}
+          </View>
+        </TouchableWithoutFeedback>
+      </Animated.View>
     );
   }
 }
